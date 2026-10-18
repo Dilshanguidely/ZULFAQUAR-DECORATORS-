@@ -124,33 +124,36 @@
       color: white;
       border-color: var(--green);
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-    }
-    .photo-card { min-width: 0; }
-    .photo-card img {
-      width: 100%;
-      aspect-ratio: 3 / 4;
-      object-fit: cover;
-      display: block;
-      background: #e4e0d7;
-      border-radius: 3px;
-    }
-    .photo-card figcaption {
-      padding: 10px 2px 12px;
-      font-size: 15px;
-    }
-    .photo-card small {
-      display: block;
-      font: 10px Arial, sans-serif;
-      color: var(--muted);
-      margin-top: 5px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-    .photo-card[hidden] { display: none; }
+    
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.photo-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  background: #e4e0d7;
+  cursor: zoom-in;
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+    
+  
 
     .owner {
       background: #eae5da;
@@ -359,6 +362,76 @@
   });
 
   document.getElementById("year").textContent = new Date().getFullYear();
+  
+<style>
+  #photoViewer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, .95);
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  #photoViewer.open {
+    display: flex;
+  }
+
+  #photoViewer img {
+    max-width: 100%;
+    max-height: 85dvh;
+    object-fit: contain;
+  }
+
+  #photoViewer button {
+    position: absolute;
+    top: 16px;
+    right: 18px;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 8px;
+    font-size: 20px;
+  }
+</style>
+
+<div id="photoViewer" role="dialog" aria-modal="true"
+     aria-label="Full size decoration photo">
+  <button id="closeViewer" aria-label="Close photo">✕</button>
+  <img id="viewerImage" src="" alt="Full size decoration">
+</div>
+
+<script>
+  const viewer = document.getElementById("photoViewer");
+  const viewerImage = document.getElementById("viewerImage");
+
+  document.getElementById("photoGrid").addEventListener("click", e => {
+    const img = e.target.closest(".photo-card img");
+    if (!img || !img.naturalWidth) return;
+
+    viewerImage.src = img.src;
+    viewer.classList.add("open");
+    document.body.style.overflow = "hidden";
+  });
+
+  function closePhoto() {
+    viewer.classList.remove("open");
+    viewerImage.src = "";
+    document.body.style.overflow = "";
+  }
+
+  document.getElementById("closeViewer").addEventListener("click", closePhoto);
+
+  viewer.addEventListener("click", e => {
+    if (e.target === viewer) closePhoto();
+  });
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape") closePhoto();
+  });
+</script>
+  
 </script>
 </body>
   </html>
