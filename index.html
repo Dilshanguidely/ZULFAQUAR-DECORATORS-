@@ -1,0 +1,658 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#12251f">
+  <meta name="description" content="Wedding, event and celebration decoration by Zulfaquar Decorators in Islampur, West Bengal.">
+  <title>Zulfaquar Decorators | Beautifully Celebrated</title>
+
+  <style>
+    :root {
+      --green: #12251f;
+      --green2: #203c31;
+      --gold: #d9bd83;
+      --cream: #f8f5ef;
+      --ink: #252820;
+      --muted: #77766e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    body.viewer-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 4%;
+      background: var(--green);
+      color: white;
+      border-bottom: 1px solid #ffffff20;
+    }
+
+    .brand {
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: bold;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--gold);
+      font: 9px Arial, sans-serif;
+      margin-top: 5px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font: 11px Arial, sans-serif;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      background: var(--green);
+      color: white;
+      padding: 60px 6% 65px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font: 11px Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: clamp(36px, 9vw, 68px);
+      line-height: 1.08;
+      font-weight: normal;
+      margin: 22px 0 16px;
+    }
+
+    h1 em {
+      color: var(--gold);
+    }
+
+    .hero p {
+      font: 14px/1.8 Arial, sans-serif;
+      color: #e0e4de;
+      max-width: 500px;
+      margin: 0 auto 28px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--green);
+      padding: 14px 20px;
+      border: 1px solid var(--gold);
+      border-radius: 3px;
+      font: bold 12px Arial, sans-serif;
+      cursor: pointer;
+    }
+
+    .button.outline {
+      background: transparent;
+      color: var(--gold);
+    }
+
+    .intro {
+      padding: 45px 6%;
+      text-align: center;
+    }
+
+    .intro h2,
+    .section-heading h2,
+    .owner h2 {
+      font-size: clamp(28px, 6vw, 43px);
+      font-weight: normal;
+      margin: 12px 0;
+    }
+
+    .intro p,
+    .section-heading p {
+      font: 14px/1.9 Arial, sans-serif;
+      color: var(--muted);
+      max-width: 550px;
+      margin: 12px auto;
+    }
+
+    .gallery {
+      padding: 25px 4% 55px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 25px;
+    }
+
+    .filter {
+      border: 1px solid #d9d3c5;
+      background: transparent;
+      padding: 10px 13px;
+      border-radius: 30px;
+      font: 12px Arial, sans-serif;
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    .filter.active,
+    .filter:hover {
+      background: var(--green);
+      color: white;
+      border-color: var(--green);
+    }
+
+    /* Large gallery images on mobile */
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 22px;
+    }
+
+    .photo-card {
+      margin: 0;
+      min-width: 0;
+      background: white;
+      border: 1px solid #e7e1d6;
+      padding: 7px;
+      box-shadow: 0 4px 15px #12251f0b;
+    }
+
+    .photo-card[hidden] {
+      display: none !important;
+    }
+
+    .photo-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 3px;
+      background: #e4e0d7;
+      cursor: zoom-in;
+    }
+
+    .photo-card img:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .photo-card figcaption {
+      padding: 13px 7px 8px;
+      font-size: 16px;
+    }
+
+    .photo-card small {
+      display: block;
+      color: var(--muted);
+      font: 10px Arial, sans-serif;
+      letter-spacing: 1.5px;
+      margin-top: 7px;
+    }
+
+    .owner {
+      background: #eae5da;
+      padding: 45px 6%;
+      display: grid;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .owner img {
+      display: block;
+      width: 100%;
+      max-height: 480px;
+      object-fit: contain;
+      background: #d5d0c5;
+      border-radius: 3px;
+    }
+
+    .owner p {
+      font: 14px/1.9 Arial, sans-serif;
+      color: #65665d;
+    }
+
+    .owner .eyebrow {
+      color: #80663a;
+    }
+
+    .contact {
+      padding: 48px 6%;
+      text-align: center;
+      background: var(--green2);
+      color: white;
+    }
+
+    .contact h2 {
+      font-size: clamp(28px, 6vw, 40px);
+      font-weight: normal;
+    }
+
+    .contact p {
+      font: 14px/1.9 Arial, sans-serif;
+      color: #e0e4de;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    footer {
+      background: var(--green);
+      color: #e5e0d5;
+      padding: 23px 5%;
+      text-align: center;
+      font: 11px/1.8 Arial, sans-serif;
+    }
+
+    /* Full-screen photo viewer */
+    #photoViewer {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      background: rgba(0, 0, 0, 0.96);
+      align-items: center;
+      justify-content: center;
+      padding: 60px 12px 20px;
+    }
+
+    #photoViewer.open {
+      display: flex;
+    }
+
+    #viewerImage {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      cursor: zoom-out;
+    }
+
+    #closeViewer {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      z-index: 2;
+      width: 46px;
+      height: 46px;
+      border: 1px solid #ffffff70;
+      border-radius: 50%;
+      background: #ffffff18;
+      color: white;
+      font: 27px Arial, sans-serif;
+      cursor: pointer;
+    }
+
+    #photoCounter {
+      position: absolute;
+      top: 25px;
+      left: 16px;
+      color: white;
+      font: 13px Arial, sans-serif;
+    }
+
+    @media (min-width: 600px) {
+      header {
+        padding: 17px 6%;
+      }
+
+      .brand {
+        font-size: 18px;
+      }
+
+      nav {
+        gap: 20px;
+        font-size: 13px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .hero {
+        padding: 85px 8% 95px;
+      }
+
+      .intro {
+        padding: 65px 8%;
+      }
+
+      .gallery {
+        padding: 35px 6% 75px;
+      }
+
+      .owner {
+        grid-template-columns: 0.9fr 1.1fr;
+        padding: 70px 8%;
+        gap: 40px;
+      }
+    }
+
+    @media (min-width: 950px) {
+      .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .gallery {
+        padding-left: 7%;
+        padding-right: 7%;
+      }
+
+      .owner {
+        padding: 75px 10%;
+        gap: 55px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a class="brand" href="#home">
+    ZULFAQUAR DECORATORS
+    <span>EVENTS • DECOR • CELEBRATIONS</span>
+  </a>
+
+  <nav aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#owner">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="eyebrow">Every celebration deserves beauty</div>
+    <h1>Moments made<br><em>memorable.</em></h1>
+
+    <p>
+      Discover decoration ideas for weddings, celebrations
+      and special occasions — crafted with care in Islampur.
+    </p>
+
+    <a class="button" href="#gallery">EXPLORE OUR DECORATIONS ↓</a>
+  </section>
+
+  <section class="intro">
+    <div class="eyebrow">Welcome to our world</div>
+    <h2>Decor that tells your story.</h2>
+    <p>
+      From elegant stages to beautiful event setups,
+      explore our work and find inspiration for your next celebration.
+    </p>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="section-heading">
+      <div class="eyebrow">Our portfolio</div>
+      <h2>Decoration Gallery</h2>
+      <p>Tap any photo to view it in full screen.</p>
+    </div>
+
+    <div class="filters" aria-label="Filter gallery">
+      <button class="filter active" data-filter="all">All Designs</button>
+      <button class="filter" data-filter="stage">Stage & Wedding</button>
+      <button class="filter" data-filter="event">Events</button>
+      <button class="filter" data-filter="other">Other Designs</button>
+    </div>
+
+    <div class="grid" id="photoGrid"></div>
+  </section>
+
+  <section class="owner" id="owner">
+    <img
+      src="Owner.jpg"
+      alt="Owner of Zulfaquar Decorators"
+      loading="lazy"
+      onerror="this.alt='Owner photo not found. Check Owner.jpg filename.'"
+    >
+
+    <div>
+      <div class="eyebrow">The person behind our work</div>
+      <h2>Meet the Owner</h2>
+
+      <p>
+        At Zulfaquar Decorators, we believe every occasion deserves
+        thoughtful decoration and personal attention. Our aim is to
+        help families create beautiful memories for their special days.
+      </p>
+
+      <p>
+        <strong>Zulfaquar Decorators</strong><br>
+        Zeropani, Islampur, West Bengal 733202
+      </p>
+
+      <a class="button" href="#contact">GET IN TOUCH</a>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="eyebrow">Let's plan something beautiful</div>
+    <h2>Your celebration starts here.</h2>
+    <p>For decoration enquiries, contact us directly.</p>
+    <p>📍 Zeropani, Islampur, West Bengal 733202</p>
+
+    <div class="contact-actions">
+      <a class="button" href="tel:+918016137886">CALL 8016137886</a>
+
+      <a
+        class="button outline"
+        href="https://wa.me/918016137886?text=Assalamu%20alaikum%2C%20I%20want%20to%20enquire%20about%20decoration."
+        target="_blank"
+        rel="noopener"
+      >WHATSAPP US</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> ZULFAQUAR DECORATORS<br>
+  Made with care in Islampur, West Bengal.
+</footer>
+
+<!-- Full-screen photo viewer -->
+<div
+  id="photoViewer"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Full-size decoration photo"
+>
+  <span id="photoCounter"></span>
+  <button id="closeViewer" aria-label="Close photo">×</button>
+  <img id="viewerImage" src="" alt="Full-size decoration">
+</div>
+
+<script>
+  const photos = Array.from({ length: 18 }, (_, i) => {
+    const number = String(i).padStart(4, "0");
+
+    return {
+      src: `IMG-20261018-WA${number}.jpg`,
+      category: i < 8 ? "stage" : i < 14 ? "event" : "other",
+      title: i < 8
+        ? "Stage & Wedding Decor"
+        : i < 14
+          ? "Celebration Design"
+          : "Our Decoration Work"
+    };
+  });
+
+  const grid = document.getElementById("photoGrid");
+  const viewer = document.getElementById("photoViewer");
+  const viewerImage = document.getElementById("viewerImage");
+  const photoCounter = document.getElementById("photoCounter");
+
+  let currentPhotoIndex = 0;
+  let lastFocusedElement = null;
+
+  // Build the gallery
+  photos.forEach((photo, i) => {
+    const card = document.createElement("figure");
+    card.className = "photo-card";
+    card.dataset.category = photo.category;
+
+    const img = document.createElement("img");
+    img.src = photo.src;
+    img.alt = `${photo.title} ${i + 1}`;
+    img.loading = i < 4 ? "eager" : "lazy";
+    img.tabIndex = 0;
+    img.setAttribute("role", "button");
+    img.setAttribute("aria-label", `View design ${i + 1} full screen`);
+
+    img.onerror = () => {
+      img.alt = `Image not found: ${photo.src}`;
+      img.style.cursor = "default";
+    };
+
+    const caption = document.createElement("figcaption");
+    caption.textContent = photo.title;
+
+    const small = document.createElement("small");
+    small.textContent = `DESIGN ${String(i + 1).padStart(2, "0")}`;
+
+    caption.appendChild(small);
+    card.append(img, caption);
+    grid.appendChild(card);
+  });
+
+  // Filter gallery
+  document.querySelectorAll(".filter").forEach(button => {
+    button.addEventListener("click", () => {
+      document.querySelectorAll(".filter").forEach(b => {
+        b.classList.toggle("active", b === button);
+      });
+
+      const filter = button.dataset.filter;
+
+      document.querySelectorAll(".photo-card").forEach(card => {
+        card.hidden =
+          filter !== "all" && card.dataset.category !== filter;
+      });
+    });
+  });
+
+  // Open selected photo
+  function openPhoto(img) {
+    if (!img.naturalWidth) return;
+
+    lastFocusedElement = document.activeElement;
+    currentPhotoIndex = photos.findIndex(p => p.src === img.getAttribute("src"));
+
+    viewerImage.src = img.src;
+    viewerImage.alt = img.alt;
+    photoCounter.textContent = `DESIGN ${currentPhotoIndex + 1} / ${photos.length}`;
+
+    viewer.classList.add("open");
+    document.body.classList.add("viewer-open");
+    document.getElementById("closeViewer").focus();
+  }
+
+  grid.addEventListener("click", event => {
+    const img = event.target.closest(".photo-card img");
+    if (img) openPhoto(img);
+  });
+
+  grid.addEventListener("keydown", event => {
+    const img = event.target.closest(".photo-card img");
+
+    if (img && (event.key === "Enter" || event.key === " ")) {
+      event.preventDefault();
+      openPhoto(img);
+    }
+  });
+
+  // Close photo
+  function closePhoto() {
+    viewer.classList.remove("open");
+    document.body.classList.remove("viewer-open");
+    viewerImage.src = "";
+
+    if (lastFocusedElement) {
+      lastFocusedElement.focus();
+    }
+  }
+
+  document.getElementById("closeViewer")
+    .addEventListener("click", closePhoto);
+
+  viewer.addEventListener("click", event => {
+    if (event.target === viewer || event.target === viewerImage) {
+      closePhoto();
+    }
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && viewer.classList.contains("open")) {
+      closePhoto();
+    }
+  });
+
+  // Current year
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
