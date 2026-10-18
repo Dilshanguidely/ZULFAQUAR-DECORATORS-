@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#12251f">
+  <meta name="description" content="Wedding, event decoration and rental items by Zulfaquar Decorators in Islampur, West Bengal.">
+  <meta name="google-site-verification" content="Qv1OFFncM8FMMhU_IPYymtsmMlfJ5O5hzGo9X4ijNPs">
+  <title>Zulfaquar Decorators | Beautifully Celebrated</title>
+
+  <style>
+    :root {
+      --green: #12251f;
+      --green2: #203c31;
+      --gold: #d9bd83;
+      --cream: #f8f5ef;
+      --ink: #252820;
+      --muted: #77766e;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    body.viewer-open { overflow: hidden; }
+
+    a { color: inherit; text-decoration: none; }
+    button, input { font: inherit; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 4%;
+      background: var(--green);
+      color: white;
+      border-bottom: 1px solid #ffffff20;
+    }
+
+    .brand {
+      font-size: 14px;
+      letter-spacing: 1px;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--gold);
+      font: 9px Arial, sans-serif;
+      margin-top: 5px;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 11px;
+      font: 11px Arial, sans-serif;
+    }
+
+    nav a:hover { color: var(--gold); }
+
+    .hero {
+      background: var(--green);
+      color: white;
+      padding: 60px 6% 65px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      font: 11px Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: clamp(36px, 9vw, 68px);
+      line-height: 1.08;
+      font-weight: normal;
+      margin: 22px 0 16px;
+    }
+
+    h1 em { color: var(--gold); }
+
+    .hero p {
+      font: 14px/1.8 Arial, sans-serif;
+      color: #e0e4de;
+      max-width: 500px;
+      margin: 0 auto 28px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--green);
+      padding: 14px 20px;
+      border: 1px solid var(--gold);
+      border-radius: 3px;
+      font: bold 12px Arial, sans-serif;
+      cursor: pointer;
+    }
+
+    .button.outline {
+      background: transparent;
+      color: var(--gold);
+    }
+
+    .intro {
+      padding: 45px 6%;
+      text-align: center;
+    }
+
+    .intro h2,
+    .section-heading h2,
+    .owner h2 {
+      font-size: clamp(28px, 6vw, 43px);
+      font-weight: normal;
+      margin: 12px 0;
+    }
+
+    .intro p,
+    .section-heading p {
+      font: 14px/1.9 Arial, sans-serif;
+      color: var(--muted);
+      max-width: 550px;
+      margin: 12px auto;
+    }
+
+    .gallery { padding: 25px 4% 55px; }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 25px;
+    }
+
+    .filter {
+      border: 1px solid #d9d3c5;
+      background: transparent;
+      padding: 10px 13px;
+      border-radius: 30px;
+      font: 12px Arial, sans-serif;
+      color: var(--ink);
+      cursor: pointer;
+    }
+
+    .filter.active,
+    .filter:hover {
+      background: var(--green);
+      color: white;
+      border-color: var(--green);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 22px;
+    }
+
+    .photo-card {
+      margin: 0;
+      min-width: 0;
+      background: white;
+      border: 1px solid #e7e1d6;
+      padding: 7px;
+      box-shadow: 0 4px 15px #12251f0b;
+    }
+
+    .photo-card[hidden] { display: none !important; }
+    .photo-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 3px;
+      background: #e4e0d7;
+      cursor: zoom-in;
+    }
+
+    .photo-card img:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .photo-card figcaption {
+      padding: 13px 7px 8px;
+      font-size: 16px;
+    }
+
+    .photo-card small {
+      display: block;
+      color: var(--muted);
+      font: 10px Arial, sans-serif;
+      letter-spacing: 1.5px;
+      margin-top: 7px;
+    }
+
+    /* RENTAL CALCULATOR */
+    .rental-section {
+      padding: 55px 5%;
+      background: var(--green);
+      color: white;
+    }
+
+    .rental-container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .rental-section h2 {
+      color: var(--gold);
+      font-size: clamp(29px, 6vw, 44px);
+      font-weight: normal;
+      margin: 12px 0;
+    }
+
+    .rental-intro {
+      max-width: 650px;
+      color: #e0e4de;
+      font: 14px/1.8 Arial, sans-serif;
+    }
+
+    .rental-rates-note {
+      margin: 22px 0;
+      padding: 13px 15px;
+      border: 1px solid #d9bd8355;
+      border-radius: 5px;
+      color: #f1dfb9;
+      font: 12px/1.7 Arial, sans-serif;
+    }
+
+    .rental-controls {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin: 25px 0;
+      font: 14px Arial, sans-serif;
+    }
+
+    .rental-controls input {
+      width: 90px;
+      padding: 11px;
+      border: 1px solid var(--gold);
+      border-radius: 5px;
+      background: white;
+      color: #222;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .rental-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 13px;
+    }
+
+    .rental-card {
+      min-width: 0;
+      padding: 15px 12px;
+      background: #203c31;
+      border: 1px solid #ffffff25;
+      border-radius: 10px;
+    }
+
+    .rental-art {
+      display: grid;
+      place-items: center;
+      height: 95px;
+      margin-bottom: 12px;
+      border-radius: 6px;
+      background:
+        radial-gradient(circle at center, #d9bd8320, transparent 65%),
+        #172e25;
+      color: var(--gold);
+      font: 12px Arial, sans-serif;
+      letter-spacing: 2px;
+    }
+
+    .rental-card h3 {
+      margin: 0 0 7px;
+      font-size: 17px;
+      font-weight: normal;
+      overflow-wrap: anywhere;
+    }
+
+    .rental-price {
+      margin: 0 0 13px;
+      color: var(--gold);
+      font: bold 13px Arial, sans-serif;
+    }
+
+    .rental-qty-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      font: 12px Arial, sans-serif;
+      color: #e0e4de;
+    }
+
+    .rental-qty {
+      width: 68px;
+      min-width: 0;
+      padding: 9px 4px;
+      border: 1px solid #d9bd83;
+      border-radius: 5px;
+      background: white;
+      color: #222;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .rental-line-total {
+      display: block;
+      margin-top: 13px;
+      color: white;
+      font: bold 13px Arial, sans-serif;
+      overflow-wrap: anywhere;
+    }
+
+    .rental-total-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 24px;
+      padding: 20px 16px;
+      border: 1px solid var(--gold);
+      border-radius: 9px;
+      background: #203c31;
+    }
+
+    .rental-total-label { font-size: 17px; }
+
+    #rentalSummary {
+      color: #d6ddd7;
+      font: 12px/1.7 Arial, sans-serif;
+      margin: 8px 0 0;
+    }
+
+    #rentalTotal {
+      color: var(--gold);
+      font: bold clamp(24px, 6vw, 35px) Arial, sans-serif;
+      overflow-wrap: anywhere;
+    }
+
+    .rental-note {
+      color: #d6ddd7;
+      font: 12px/1.8 Arial, sans-serif;
+      margin: 18px 0;
+    }
+
+    .rental-contact {
+      display: inline-block;
+      padding: 13px 18px;
+      background: var(--gold);
+      color: var(--green);
+      border-radius: 4px;
+      font: bold 12px Arial, sans-serif;
+    }
+    .owner {
+      background: #eae5da;
+      padding: 45px 6%;
+      display: grid;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .owner img {
+      display: block;
+      width: 100%;
+      max-height: 480px;
+      object-fit: contain;
+      background: #d5d0c5;
+      border-radius: 3px;
+    }
+
+    .owner p {
+      font: 14px/1.9 Arial, sans-serif;
+      color: #65665d;
+    }
+
+    .owner .eyebrow { color: #80663a; }
+
+    .contact {
+      padding: 48px 6%;
+      text-align: center;
+      background: var(--green2);
+      color: white;
+    }
+
+    .contact h2 {
+      font-size: clamp(28px, 6vw, 40px);
+      font-weight: normal;
+    }
+
+    .contact p {
+      font: 14px/1.9 Arial, sans-serif;
+      color: #e0e4de;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    footer {
+      background: var(--green);
+      color: #e5e0d5;
+      padding: 23px 5%;
+      text-align: center;
+      font: 11px/1.8 Arial, sans-serif;
+    }
+
+    /* FULL-SCREEN GALLERY VIEWER */
+    #photoViewer {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      width: 100%;
+      height: 100%;
+      height: 100dvh;
+      background: rgba(0, 0, 0, 0.96);
+      align-items: center;
+      justify-content: center;
+      padding: 60px 12px 20px;
+    }
+
+    #photoViewer.open { display: flex; }
+
+    #viewerImage {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      cursor: zoom-out;
+    }
+
+    #closeViewer {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      z-index: 2;
+      width: 46px;
+      height: 46px;
+      border: 1px solid #ffffff70;
+      border-radius: 50%;
+      background: #ffffff18;
+      color: white;
+      font: 27px Arial, sans-serif;
+      cursor: pointer;
+    }
+
+    #photoCounter {
+      position: absolute;
+      top: 25px;
+      left: 16px;
+      color: white;
+      font: 13px Arial, sans-serif;
+    }
+
+    @media (min-width: 600px) {
+      header { padding: 17px 6%; }
+      .brand { font-size: 18px; }
+      nav { gap: 17px; font-size: 13px; }
+
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .hero { padding: 85px 8% 95px; }
+      .intro { padding: 65px 8%; }
+      .gallery { padding: 35px 6% 75px; }
+
+      .owner {
+        grid-template-columns: 0.9fr 1.1fr;
+        padding: 70px 8%;
+        gap: 40px;
+      }
+
+      .rental-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+    }
+
+    @media (min-width: 950px) {
+      .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .gallery {
+        padding-left: 7%;
+        padding-right: 7%;
+      }
+
+      .owner {
+        padding: 75px 10%;
+        gap: 55px;
+      }
+
+      .rental-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 380px) {
+      header { padding: 11px 3%; }
+      .brand { font-size: 11px; }
+      .brand span { font-size: 8px; }
+      nav { gap: 7px; font-size: 10px; }
+      .rental-card { padding: 12px 9px; }
+      .rental-card h3 { font-size: 15px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a class="brand" href="#home">
+    ZULFAQUAR DECORATORS
+    <span>EVENTS • DECOR • CELEBRATIONS</span>
+  </a>
+
+  <nav aria-label="Main navigation">
+    <a href="#home">Home</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#rental">Rental</a>
+    <a href="#owner">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="eyebrow">Every celebration deserves beauty</div>
+    <h1>Moments made<br><em>memorable.</em></h1>
+
+    <p>
+      Discover decoration ideas for weddings, celebrations
+      and special occasions — crafted with care in Islampur.
+    </p><a class="button" href="#gallery">EXPLORE OUR DECORATIONS ↓</a>
+    <a class="button outline" href="#rental">EXPLORE RENTAL ITEMS</a>
+  </section>
+
+  <section class="intro">
+    <div class="eyebrow">Welcome to our world</div>
+    <h2>Decor that tells your story.</h2>
+    <p>
+      From elegant stages to beautiful event setups,
+      explore our work and find inspiration for your next celebration.
+    </p>
+  </section>
+
+  <section class="gallery" id="gallery">
+    <div class="section-heading">
+      <div class="eyebrow">Our portfolio</div>
+      <h2>Decoration Gallery</h2>
+      <p>Tap any photo to view it in full screen.</p>
+    </div>
+
+    <div class="filters" aria-label="Filter gallery">
+      <button class="filter active" data-filter="all">All Designs</button>
+      <button class="filter" data-filter="stage">Stage & Wedding</button>
+      <button class="filter" data-filter="event">Events</button>
+      <button class="filter" data-filter="other">Other Designs</button>
+    </div>
+
+    <div class="grid" id="photoGrid"></div>
+  </section>
+
+  <!-- RENTAL CALCULATOR -->
+  <section class="rental-section" id="rental">
+    <div class="rental-container">
+      <div class="eyebrow">Rental Collection</div>
+      <h2>Choose Your Rental Items</h2>
+      <p class="rental-intro">
+        Select your items, enter quantities and choose the number
+        of rental days. Your estimated total will be calculated instantly.
+      </p>
+
+      <div class="rental-rates-note">
+        All listed prices are per piece, per day.
+        Select zero for any item you do not need.
+      </div>
+
+      <div class="rental-controls">
+        <label for="rentalDays">Rental duration (days):</label>
+        <input
+          id="rentalDays"
+          type="number"
+          min="1"
+          max="365"
+          step="1"
+          value="1"
+          inputmode="numeric"
+        >
+      </div>
+
+      <div class="rental-grid" id="rentalGrid"></div>
+
+      <div class="rental-total-card" aria-live="polite">
+        <div>
+          <div class="rental-total-label">Estimated Total Rent</div>
+          <p id="rentalSummary">0 pieces · 1 day</p>
+        </div>
+        <strong id="rentalTotal">₹0</strong>
+      </div>
+
+      <p class="rental-note">
+        This calculator provides an estimate only. Please contact us
+        to confirm actual availability and final charges.
+        Delivery or other charges, if any, are not included.
+      </p>
+
+      <a
+        class="rental-contact"
+        href="https://wa.me/918016137886?text=Assalamu%20alaikum%2C%20I%20want%20to%20enquire%20about%20rental%20items."
+        target="_blank"
+        rel="noopener"
+      >ENQUIRE ON WHATSAPP</a>
+    </div>
+  </section>
+
+  <section class="owner" id="owner">
+    <img
+      src="Owner.jpg"
+      alt="Owner of Zulfaquar Decorators"
+      loading="lazy"
+      onerror="this.alt='Owner photo not found. Check Owner.jpg filename.'"
+    >
+
+    <div>
+      <div class="eyebrow">The person behind our work</div>
+      <h2>Meet the Owner</h2>
+
+      <p>
+        At Zulfaquar Decorators, we believe every occasion deserves
+        thoughtful decoration and personal attention. Our aim is to
+        help families create beautiful memories for their special days.
+      </p>
+
+      <p>
+        <strong>Zulfaquar Decorators</strong><br>
+        Zeropani, Islampur, West Bengal 733202
+      </p>
+
+      <a class="button" href="#contact">GET IN TOUCH</a>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="eyebrow">Let's plan something beautiful</div>
+    <h2>Your celebration starts here.</h2>
+    <p>For decoration and rental enquiries, contact us directly.</p>
+    <p>📍 Zeropani, Islampur, West Bengal 733202</p>
+
+    <div class="contact-actions">
+      <a class="button" href="tel:+918016137886">CALL 8016137886</a>
+
+      <a
+        class="button outline"
+        href="https://wa.me/918016137886?text=Assalamu%20alaikum%2C%20I%20want%20to%20enquire%20about%20decoration."
+        target="_blank"
+        rel="noopener"
+      >WHATSAPP US</a>
+    </div>
+  </section>
+</main><footer>
+  © <span id="year"></span> ZULFAQUAR DECORATORS<br>
+  Made with care in Islampur, West Bengal.
+</footer>
+
+<!-- Full-screen gallery photo viewer -->
+<div
+  id="photoViewer"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Full-size decoration photo"
+>
+  <span id="photoCounter"></span>
+  <button id="closeViewer" aria-label="Close photo">×</button>
+  <img id="viewerImage" src="" alt="Full-size decoration">
+</div>
+
+<script>
+  // EXISTING DECORATION GALLERY
+  const photos = Array.from({ length: 18 }, (_, i) => {
+    const number = String(i).padStart(4, "0");
+
+    return {
+      src: `IMG-20261018-WA${number}.jpg`,
+      category: i < 8 ? "stage" : i < 14 ? "event" : "other",
+      title: i < 8
+        ? "Stage & Wedding Decor"
+        : i < 14
+          ? "Celebration Design"
+          : "Our Decoration Work"
+    };
+  });
+
+  const grid = document.getElementById("photoGrid");
+  const viewer = document.getElementById("photoViewer");
+  const viewerImage = document.getElementById("viewerImage");
+  const photoCounter = document.getElementById("photoCounter");
+
+  let lastFocusedElement = null;
+
+  photos.forEach((photo, i) => {
+    const card = document.createElement("figure");
+    card.className = "photo-card";
+    card.dataset.category = photo.category;
+
+    const img = document.createElement("img");
+    img.src = photo.src;
+    img.alt = `${photo.title} ${i + 1}`;
+    img.loading = i < 4 ? "eager" : "lazy";
+    img.tabIndex = 0;
+    img.setAttribute("role", "button");
+    img.setAttribute("aria-label", `View design ${i + 1} full screen`);
+
+    img.onerror = () => {
+      img.alt = `Image not found: ${photo.src}`;
+      img.style.cursor = "default";
+    };
+
+    const caption = document.createElement("figcaption");
+    caption.textContent = photo.title;
+
+    const small = document.createElement("small");
+    small.textContent = `DESIGN ${String(i + 1).padStart(2, "0")}`;
+
+    caption.appendChild(small);
+    card.append(img, caption);
+    grid.appendChild(card);
+  });
+
+  document.querySelectorAll(".filter").forEach(button => {
+    button.addEventListener("click", () => {
+      document.querySelectorAll(".filter").forEach(b => {
+        b.classList.toggle("active", b === button);
+      });
+
+      const filter = button.dataset.filter;
+
+      document.querySelectorAll(".photo-card").forEach(card => {
+        card.hidden =
+          filter !== "all" && card.dataset.category !== filter;
+      });
+    });
+  });
+
+  function openPhoto(img) {
+    if (!img.naturalWidth) return;
+
+    lastFocusedElement = document.activeElement;
+
+    const index = photos.findIndex(
+      photo => photo.src === img.getAttribute("src")
+    );
+
+    viewerImage.src = img.src;
+    viewerImage.alt = img.alt;
+    photoCounter.textContent =
+      `DESIGN ${index + 1} / ${photos.length}`;
+
+    viewer.classList.add("open");
+    document.body.classList.add("viewer-open");
+    document.getElementById("closeViewer").focus();
+  }
+
+  grid.addEventListener("click", event => {
+    const img = event.target.closest(".photo-card img");
+    if (img) openPhoto(img);
+  });
+
+  grid.addEventListener("keydown", event => {
+    const img = event.target.closest(".photo-card img");
+
+    if (img && (event.key === "Enter" || event.key === " ")) {
+      event.preventDefault();
+      openPhoto(img);
+    }
+  });
+
+  function closePhoto() {
+    viewer.classList.remove("open");
+    document.body.classList.remove("viewer-open");
+    viewerImage.src = "";
+
+    if (lastFocusedElement) lastFocusedElement.focus();
+  }
+
+  document.getElementById("closeViewer")
+    .addEventListener("click", closePhoto);
+
+  viewer.addEventListener("click", event => {
+    if (event.target === viewer || event.target === viewerImage) {
+      closePhoto();
+    }
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && viewer.classList.contains("open")) {
+      closePhoto();
+    }
+  });// RENTAL ITEMS AND DAILY PRICES
+  // Price = quantity × price per piece per day × rental days.
+  const rentalItems = [
+    { id: "chair", name: "Chair", price: 5 },
+    { id: "table", name: "Table", price: 20 },
+    { id: "suspan", name: "Suspan", price: 100 },
+    { id: "carpet", name: "Carpet", price: 100 },
+    { id: "net", name: "Net", price: 50 },
+    { id: "boat", name: "Boat", price: 100 },
+    { id: "vip", name: "VIP", price: 25 },
+    { id: "bati", name: "Bati", price: 10 }
+  ];
+
+  const rentalGrid = document.getElementById("rentalGrid");
+  const quantities = {};
+
+  function money(value) {
+    return "₹" + value.toLocaleString("en-IN");
+  }
+
+  rentalItems.forEach(item => {
+    quantities[item.id] = 0;
+
+    const card = document.createElement("article");
+    card.className = "rental-card";
+
+    const art = document.createElement("div");
+    art.className = "rental-art";
+    art.setAttribute("aria-hidden", "true");
+    art.textContent = "RENTAL ITEM";
+
+    const title = document.createElement("h3");
+    title.textContent = item.name;
+
+    const price = document.createElement("p");
+    price.className = "rental-price";
+    price.textContent = money(item.price) + " / piece / day";
+
+    const row = document.createElement("div");
+    row.className = "rental-qty-row";
+
+    const label = document.createElement("label");
+    label.textContent = "Quantity";
+
+    const input = document.createElement("input");
+    input.className = "rental-qty";
+    input.type = "number";
+    input.min = "0";
+    input.max = "9999";
+    input.step = "1";
+    input.value = "0";
+    input.inputMode = "numeric";
+    input.setAttribute("aria-label", item.name + " quantity");
+
+    const subtotal = document.createElement("span");
+    subtotal.className = "rental-line-total";
+    subtotal.textContent = "Subtotal: ₹0";
+
+    input.addEventListener("input", () => {
+      const parsed = Math.floor(Number(input.value));
+
+      quantities[item.id] = input.value === ""
+        ? 0
+        : Number.isFinite(parsed)
+          ? Math.max(0, Math.min(9999, parsed))
+          : 0;
+
+      if (Number(input.value) > 9999) {
+        input.value = "9999";
+        quantities[item.id] = 9999;
+      }
+
+      if (Number(input.value) < 0) {
+        input.value = "0";
+        quantities[item.id] = 0;
+      }
+
+      updateRentalTotal();
+    });
+
+    row.append(label, input);
+    card.append(art, title, price, row, subtotal);
+    rentalGrid.appendChild(card);
+
+    item.subtotalElement = subtotal;
+  });
+
+  const daysInput = document.getElementById("rentalDays");
+
+  function getRentalDays() {
+    const parsed = Math.floor(Number(daysInput.value));
+    const days = Number.isFinite(parsed)
+      ? Math.max(1, Math.min(365, parsed || 1))
+      : 1;
+
+    daysInput.value = days;
+    return days;
+  }
+
+  function updateRentalTotal() {
+    const days = getRentalDays();
+    let total = 0;
+    let selectedPieces = 0;
+
+    rentalItems.forEach(item => {
+      const quantity = quantities[item.id];
+      const subtotal = quantity * item.price * days;
+
+      total += subtotal;
+      selectedPieces += quantity;
+
+      item.subtotalElement.textContent =
+        "Subtotal: " + money(subtotal);
+    });
+
+    document.getElementById("rentalTotal").textContent = money(total);
+
+    document.getElementById("rentalSummary").textContent =
+      selectedPieces + (selectedPieces === 1 ? " piece" : " pieces") +
+      " · " + days + (days === 1 ? " day" : " days");
+  }
+
+  daysInput.addEventListener("input", updateRentalTotal);
+  daysInput.addEventListener("change", updateRentalTotal);
+
+  // Display current year
+  document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+  updateRentalTotal();
+</script>
+
+</body>
+</html>
