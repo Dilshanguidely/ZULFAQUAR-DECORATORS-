@@ -1,1021 +1,1273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#12251f">
-  <meta name="description" content="Zulfaquar Decorators offers wedding decoration, stage decoration, event decoration and rental items in Zeropani, Islampur, West Bengal 733202. Contact us for enquiries.">
-  <meta name="robots" content="index, follow">
-  <meta name="google-site-verification" content="Qv1OFFncM8FMMhU_IPYymtsmMlfJ5O5hzGo9X4ijNPs">
-
-  <link rel="canonical" href="https://dilshanguidely.github.io/ZULFAQUAR-DECORATORS-/">
-
-  <title>Zulfaquar Decorators Islampur | Wedding &amp; Event Decoration</title>
-
-  <meta property="og:title" content="Zulfaquar Decorators | Islampur">
-  <meta property="og:description" content="Wedding decoration, stage decoration, event setups and rental items in Islampur, West Bengal.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dilshanguidely.github.io/ZULFAQUAR-DECORATORS-/">
-  <meta property="og:site_name" content="Zulfaquar Decorators">
-  <meta property="og:locale" content="en_IN">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Zulfaquar Decorators | Islampur">
-  <meta name="twitter:description" content="Wedding and event decoration services in Islampur, West Bengal.">
-
-  <style>
-    :root {
-      --green: #12251f;
-      --green2: #203c31;
-      --gold: #d9bd83;
-      --cream: #f8f5ef;
-      --ink: #252820;
-      --muted: #77766e;
-    }
-
-    * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 85px;
-    }
-
-    body {
-      margin: 0;
-      background: var(--cream);
-      color: var(--ink);
-      font-family: Georgia, "Times New Roman", serif;
-    }
-
-    body.viewer-open { overflow: hidden; }
-
-    a { color: inherit; text-decoration: none; }
-    button, input { font: inherit; }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      padding: 13px 4%;
-      background: var(--green);
-      color: white;
-      border-bottom: 1px solid #ffffff20;
-    }
-
-    .brand {
-      font-size: 14px;
-      letter-spacing: 1px;
-      font-weight: bold;
-      flex-shrink: 0;
-    }
-
-    .brand span {
-      display: block;
-      color: var(--gold);
-      font: 9px Arial, sans-serif;
-      margin-top: 5px;
-      letter-spacing: 1px;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-      gap: 11px;
-      font: 11px Arial, sans-serif;
-    }
-
-    nav a:hover { color: var(--gold); }
-
-    .hero {
-      background: var(--green);
-      color: white;
-      padding: 60px 6% 65px;
-      text-align: center;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
-      font: 11px Arial, sans-serif;
-    }
-
-    h1 {
-      font-size: clamp(36px, 9vw, 68px);
-      line-height: 1.08;
-      font-weight: normal;
-      margin: 22px 0 16px;
-    }
-
-    h1 em { color: var(--gold); }
-
-    .hero p {
-      font: 14px/1.8 Arial, sans-serif;
-      color: #e0e4de;
-      max-width: 500px;
-      margin: 0 auto 28px;
-    }
-
-    .button {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--green);
-      padding: 14px 20px;
-      border: 1px solid var(--gold);
-      border-radius: 3px;
-      font: bold 12px Arial, sans-serif;
-      cursor: pointer;
-    }
-
-    .button.outline {
-      background: transparent;
-      color: var(--gold);
-    }
-
-    .intro {
-      padding: 45px 6%;
-      text-align: center;
-    }
-
-    .intro h2,
-    .section-heading h2,
-    .owner h2 {
-      font-size: clamp(28px, 6vw, 43px);
-      font-weight: normal;
-      margin: 12px 0;
-    }
-
-    .intro p,
-    .section-heading p {
-      font: 14px/1.9 Arial, sans-serif;
-      color: var(--muted);
-      max-width: 550px;
-      margin: 12px auto;
-    }
-
-    .gallery { padding: 25px 4% 55px; }
-
-    .section-heading {
-      text-align: center;
-      margin-bottom: 26px;
-    }
-
-    .filters {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-      margin-bottom: 25px;
-    }
-
-    .filter {
-      border: 1px solid #d9d3c5;
-      background: transparent;
-      padding: 10px 13px;
-      border-radius: 30px;
-      font: 12px Arial, sans-serif;
-      color: var(--ink);
-      cursor: pointer;
-    }
-
-    .filter.active,
-    .filter:hover {
-      background: var(--green);
-      color: white;
-      border-color: var(--green);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 22px;
-    }
-
-    .photo-card {
-      margin: 0;
-      min-width: 0;
-      background: white;
-      border: 1px solid #e7e1d6;
-      padding: 7px;
-      box-shadow: 0 4px 15px #12251f0b;
-    }
-
-    .photo-card[hidden] { display: none !important; }
-
-    .photo-card img {
-      display: block;
-      width: 100%;
-      height: auto;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      border-radius: 3px;
-      background: #e4e0d7;
-      cursor: zoom-in;
-    }
-
-    .photo-card img:focus-visible {
-      outline: 3px solid var(--gold);
-      outline-offset: 3px;
-    }
-
-    .photo-card figcaption {
-      padding: 13px 7px 8px;
-      font-size: 16px;
-    }
-
-    .photo-card small {
-      display: block;
-      color: var(--muted);
-      font: 10px Arial, sans-serif;
-      letter-spacing: 1.5px;
-      margin-top: 7px;
-    }
-
-    /* RENTAL CALCULATOR */
-    .rental-section {
-      padding: 55px 5%;
-      background: var(--green);
-      color: white;
-    }
-
-    .rental-container {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .rental-section h2 {
-      color: var(--gold);
-      font-size: clamp(29px, 6vw, 44px);
-      font-weight: normal;
-      margin: 12px 0;
-    }
-
-    .rental-intro {
-      max-width: 650px;
-      color: #e0e4de;
-      font: 14px/1.8 Arial, sans-serif;
-    }
-
-    .rental-rates-note {
-      margin: 22px 0;
-      padding: 13px 15px;
-      border: 1px solid #d9bd8355;
-      border-radius: 5px;
-      color: #f1dfb9;
-      font: 12px/1.7 Arial, sans-serif;
-    }
-
-    .rental-controls {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 12px;
-      margin: 25px 0;
-      font: 14px Arial, sans-serif;
-    }
-
-    .rental-controls input {
-      width: 90px;
-      padding: 11px;
-      border: 1px solid var(--gold);
-      border-radius: 5px;
-      background: white;
-      color: #222;
-      text-align: center;
-      font-size: 16px;
-    }
-
-    .rental-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 13px;
-    }
-
-    .rental-card {
-      min-width: 0;
-      padding: 15px 12px;
-      background: #203c31;
-      border: 1px solid #ffffff25;
-      border-radius: 10px;
-    }
-
-    .rental-art {
-      display: grid;
-      place-items: center;
-      height: 95px;
-      margin-bottom: 12px;
-      border-radius: 6px;
-      background:
-        radial-gradient(circle at center, #d9bd8320, transparent 65%),
-        #172e25;
-      color: var(--gold);
-      font: 12px Arial, sans-serif;
-      letter-spacing: 2px;
-    }
-
-    .rental-card h3 {
-      margin: 0 0 7px;
-      font-size: 17px;
-      font-weight: normal;
-      overflow-wrap: anywhere;
-    }
-
-    .rental-price {
-      margin: 0 0 13px;
-      color: var(--gold);
-      font: bold 13px Arial, sans-serif;
-    }
-
-    .rental-qty-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 6px;
-      font: 12px Arial, sans-serif;
-      color: #e0e4de;
-    }
-
-    .rental-qty {
-      width: 68px;
-      min-width: 0;
-      padding: 9px 4px;
-      border: 1px solid #d9bd83;
-      border-radius: 5px;
-      background: white;
-      color: #222;
-      text-align: center;
-      font-size: 16px;
-    }
-
-    .rental-line-total {
-      display: block;
-      margin-top: 13px;
-      color: white;
-      font: bold 13px Arial, sans-serif;
-      overflow-wrap: anywhere;
-    }
-
-    .rental-total-card {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-top: 24px;
-      padding: 20px 16px;
-      border: 1px solid var(--gold);
-      border-radius: 9px;
-      background: #203c31;
-    }
-
-    .rental-total-label { font-size: 17px; }
-
-    #rentalSummary {
-      color: #d6ddd7;
-      font: 12px/1.7 Arial, sans-serif;
-      margin: 8px 0 0;
-    }
-
-    #rentalTotal {
-      color: var(--gold);
-      font: bold clamp(24px, 6vw, 35px) Arial, sans-serif;
-      overflow-wrap: anywhere;
-    }
-
-    .rental-note {
-      color: #d6ddd7;
-      font: 12px/1.8 Arial, sans-serif;
-      margin: 18px 0;
-    }
-
-    .rental-contact {
-      display: inline-block;
-      padding: 13px 18px;
-      background: var(--gold);
-      color: var(--green);
-      border-radius: 4px;
-      font: bold 12px Arial, sans-serif;
-    }
-
-    .owner {
-      background: #eae5da;
-      padding: 45px 6%;
-      display: grid;
-      gap: 25px;
-      align-items: center;
-    }
-
-    .owner img {
-      display: block;
-      width: 100%;
-      max-height: 480px;
-      object-fit: contain;
-      background: #d5d0c5;
-      border-radius: 3px;
-    }
-
-    .owner p {
-      font: 14px/1.9 Arial, sans-serif;
-      color: #65665d;
-    }
-
-    .owner .eyebrow { color: #80663a; }
-
-    .contact {
-      padding: 48px 6%;
-      text-align: center;
-      background: var(--green2);
-      color: white;
-    }
-
-    .contact h2 {
-      font-size: clamp(28px, 6vw, 40px);
-      font-weight: normal;
-    }
-
-    .contact p {
-      font: 14px/1.9 Arial, sans-serif;
-      color: #e0e4de;
-    }
-
-    .contact-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    footer {
-      background: var(--green);
-      color: #e5e0d5;
-      padding: 23px 5%;
-      text-align: center;
-      font: 11px/1.8 Arial, sans-serif;
-    }
-
-    /* FULL-SCREEN GALLERY VIEWER */
-    #photoViewer {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      width: 100%;
-      height: 100%;
-      height: 100dvh;
-      background: rgba(0, 0, 0, 0.96);
-      align-items: center;
-      justify-content: center;
-      padding: 60px 12px 20px;
-    }
-
-    #photoViewer.open { display: flex; }
-
-    #viewerImage {
-      display: block;
-      width: auto;
-      height: auto;
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      cursor: zoom-out;
-    }
-
-    #closeViewer {
-      position: absolute;
-      top: 12px;
-      right: 14px;
-      z-index: 2;
-      width: 46px;
-      height: 46px;
-      border: 1px solid #ffffff70;
-      border-radius: 50%;
-      background: #ffffff18;
-      color: white;
-      font: 27px Arial, sans-serif;
-      cursor: pointer;
-    }
-
-    #photoCounter {
-      position: absolute;
-      top: 25px;
-      left: 16px;
-      color: white;
-      font: 13px Arial, sans-serif;
-    }
-
-    @media (min-width: 600px) {
-      header { padding: 17px 6%; }
-      .brand { font-size: 18px; }
-      nav { gap: 17px; font-size: 13px; }
-
-      .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 20px;
-      }
-
-      .hero { padding: 85px 8% 95px; }
-      .intro { padding: 65px 8%; }
-      .gallery { padding: 35px 6% 75px; }
-
-      .owner {
-        grid-template-columns: 0.9fr 1.1fr;
-        padding: 70px 8%;
-        gap: 40px;
-      }
-
-      .rental-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 18px;
-      }
-    }
-
-    @media (min-width: 950px) {
-      .grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 24px;
-      }
-
-      .gallery {
-        padding-left: 7%;
-        padding-right: 7%;
-      }
-
-      .owner {
-        padding: 75px 10%;
-        gap: 55px;
-      }
-
-      .rental-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 380px) {
-      header { padding: 11px 3%; }
-      .brand { font-size: 11px; }
-      .brand span { font-size: 8px; }
-      nav { gap: 7px; font-size: 10px; }
-      .rental-card { padding: 12px 9px; }
-      .rental-card h3 { font-size: 15px; }
-    }
-  </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Zulfaquar Decorators",
-    "description": "Wedding decoration, stage decoration, event decoration and rental items in Islampur, West Bengal.",
-    "url": "https://dilshanguidely.github.io/ZULFAQUAR-DECORATORS-/",
-    "telephone": "+918016137886",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Zeropani",
-      "addressLocality": "Islampur",
-      "addressRegion": "West Bengal",
-      "postalCode": "733202",
-      "addressCountry": "IN"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": "Islampur"
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#12251f">
+
+<title>Zulfaquar Decorators | Beautifully Celebrated</title>
+
+<meta name="description" content="Zulfaquar Decorators provides wedding decoration, stage decoration, event decoration and rental items in Islampur, West Bengal.">
+
+<meta name="google-site-verification" content="Qv1OFFncM8FMMhU_IPYymtsmMlfJ5O5hzGo9X4ijNPs">
+
+<link rel="canonical" href="https://dilshanguidely.github.io/ZULFAQUAR-DECORATORS-/">
+
+<style>
+:root {
+  --green: #12251f;
+  --green2: #203c31;
+  --gold: #d9bd83;
+  --cream: #f8f5ed;
+  --white: #ffffff;
+  --text: #26332c;
+  --muted: #777;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+/* HEADER */
+
+header {
+  background: var(--green);
+  color: white;
+  padding: 15px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--gold);
+  letter-spacing: 0.5px;
+}
+
+.logo small {
+  display: block;
+  font-size: 10px;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: normal;
+}
+
+nav {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+.menu-btn {
+  display: none;
+  color: var(--gold);
+  background: none;
+  border: none;
+  font-size: 27px;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 570px;
+  background:
+    linear-gradient(rgba(10,25,19,0.72), rgba(10,25,19,0.78)),
+    url("IMG-20261018-WA0000.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+}
+
+.hero-content {
+  max-width: 750px;
+}
+
+.hero-tag {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 7vw, 65px);
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero p {
+  font-size: 16px;
+  max-width: 580px;
+  margin: auto;
+  color: #eee;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 25px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: 0.3s;
+  border: 1px solid var(--gold);
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--green);
+}
+
+.btn-outline {
+  color: white;
+  background: transparent;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+/* GENERAL SECTION */
+
+section {
+  padding: 75px 7%;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-heading span {
+  color: #a78b53;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.section-heading h2 {
+  color: var(--green);
+  font-size: clamp(27px, 4vw, 38px);
+  margin-top: 8px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  max-width: 600px;
+  margin: 10px auto 0;
+}
+
+/* INTRO */
+
+.intro {
+  background: var(--white);
+  text-align: center;
+}
+
+.intro-text {
+  max-width: 850px;
+  margin: auto;
+  font-size: 16px;
+  color: #59635d;
+}
+
+.intro-text strong {
+  color: var(--green);
+}
+
+/* FEATURES */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  background: var(--cream);
+  padding: 28px 20px;
+  text-align: center;
+  border-bottom: 3px solid var(--gold);
+  border-radius: 5px;
+}
+
+.feature-card .icon {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.feature-card h3 {
+  color: var(--green);
+  margin-bottom: 8px;
+}
+
+/* GALLERY */
+
+.gallery {
+  background: var(--cream);
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filter {
+  border: 1px solid var(--green);
+  background: transparent;
+  color: var(--green);
+  padding: 9px 18px;
+  border-radius: 25px;
+  font-size: 13px;
+}
+
+.filter.active,
+.filter:hover {
+  background: var(--green);
+  color: white;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 17px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #ddd;
+  min-height: 220px;
+  cursor: pointer;
+}
+
+.gallery-item img,
+.gallery-item video {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.gallery-item:hover img,
+.gallery-item:hover video {
+  transform: scale(1.06);
+}
+
+.gallery-item.hidden {
+  display: none;
+}
+
+.gallery-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 35px 15px 13px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+}
+
+/* RENTAL */
+
+.rental {
+  background: white;
+}
+
+.rental-box {
+  max-width: 900px;
+  margin: auto;
+  background: var(--cream);
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #e5ddca;
+}
+
+.rental-intro {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.rental-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.rental-row {
+  display: grid;
+  grid-template-columns: 1fr auto 90px;
+  gap: 10px;
+  align-items: center;
+  background: white;
+  padding: 13px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.rental-row label {
+  font-weight: bold;
+  color: var(--green);
+}
+
+.rate {
+  color: #927640;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.rental-row input {
+  width: 100%;
+  padding: 9px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.duration-box {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.duration-box label {
+  font-weight: bold;
+  color: var(--green);
+}
+
+.duration-box input {
+  width: 100px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.total-box {
+  margin-top: 25px;
+  background: var(--green);
+  color: white;
+  padding: 22px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.total-box small {
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+.total-box h2 {
+  font-size: 34px;
+  color: var(--gold);
+  margin-top: 5px;
+}
+
+.rental-note {
+  text-align: center;
+  font-size: 12px;
+  color: #777;
+  margin-top: 15px;
+}
+
+.rental-actions {
+  text-align: center;
+  margin-top: 22px;
+}
+
+/* ABOUT */
+
+.about {
+  background: var(--green);
+  color: white;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 45px;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.owner-photo {
+  border: 5px solid var(--gold);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.owner-photo img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.about-text span {
+  color: var(--gold);
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+.about-text h2 {
+  font-size: 35px;
+  margin: 10px 0 20px;
+}
+
+.about-text p {
+  color: #d9dfda;
+  margin-bottom: 15px;
+}
+
+/* CONTACT */
+
+.contact {
+  background: var(--cream);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 950px;
+  margin: auto;
+}
+
+.contact-card {
+  background: white;
+  text-align: center;
+  padding: 28px 15px;
+  border-radius: 6px;
+  border-bottom: 3px solid var(--gold);
+}
+
+.contact-card .icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.contact-card h3 {
+  color: var(--green);
+  margin-bottom: 7px;
+}
+
+.contact-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* FOOTER */
+
+footer {
+  background: #0b1914;
+  color: white;
+  text-align: center;
+  padding: 28px 15px;
+}
+
+footer strong {
+  color: var(--gold);
+}
+
+footer p {
+  font-size: 13px;
+  color: #bbb;
+  margin-top: 7px;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp-float {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+  background: #25D366;
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 750px) {
+
+  header {
+    padding: 13px 5%;
   }
-  </script>
+
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--green);
+    flex-direction: column;
+    padding: 20px;
+    gap: 18px;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 500px;
+  }
+
+  section {
+    padding: 55px 5%;
+  }
+
+  .features,
+  .gallery-grid,
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .owner-photo {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .rental-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 480px) {
+
+  .features,
+  .gallery-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item img,
+  .gallery-item video {
+    height: 280px;
+  }
+
+  .rental-box {
+    padding: 15px;
+  }
+
+  .rental-row {
+    grid-template-columns: 1fr auto 75px;
+    gap: 6px;
+    padding: 10px;
+  }
+
+  .rate {
+    font-size: 11px;
+  }
+
+  .about-text h2 {
+    font-size: 29px;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <a class="brand" href="#home">
+  <a href="#home" class="logo">
     ZULFAQUAR DECORATORS
-    <span>EVENTS • DECOR • CELEBRATIONS</span>
+    <small>BEAUTIFULLY CELEBRATED</small>
   </a>
 
-  <nav aria-label="Main navigation">
-    <a href="#home">Home</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#rental">Rental</a>
-    <a href="#owner">About</a>
-    <a href="#contact">Contact</a>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <nav id="navbar">
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#gallery" onclick="closeMenu()">Gallery</a>
+    <a href="#rental" onclick="closeMenu()">Rental</a>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
   </nav>
 </header>
 
-<main>
-  <section class="hero" id="home">
-    <div class="eyebrow">Every celebration deserves beauty</div>
-    <h1>Wedding &amp; Event<br><em>Decorators in Islampur.</em></h1>
+<!-- HERO -->
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-tag">Making Every Celebration Special</div>
+
+    <h1>
+      Beautifully <span>Celebrated.</span>
+    </h1>
 
     <p>
-      Discover decoration ideas for weddings, celebrations
-      and special occasions — crafted with care in Islampur.
+      From elegant wedding stages to unforgettable events,
+      we bring your celebrations to life with beautiful decorations.
     </p>
 
-    <a class="button" href="#gallery">EXPLORE OUR DECORATIONS ↓</a>
-    <a class="button outline" href="#rental">EXPLORE RENTAL ITEMS</a>
-  </section>
+    <div class="hero-buttons">
+      <a href="#gallery" class="btn btn-gold">Explore Gallery</a>
+      <a href="https://wa.me/918016137886" class="btn btn-outline">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</section>
 
-  <section class="intro">
-    <div class="eyebrow">Welcome to our world</div>
-    <h2>Decor that tells your story.</h2>
+<!-- INTRO -->
+
+<section class="intro">
+  <div class="section-heading">
+    <span>Welcome</span>
+    <h2>Every Event Deserves Something Special</h2>
+  </div>
+
+  <div class="intro-text">
     <p>
-      Zulfaquar Decorators offers wedding decoration, stage decoration,
-      event decoration and rental items in Zeropani, Islampur, West Bengal.
-      Explore our work and contact us for your next celebration.
+      Welcome to <strong>Zulfaquar Decorators</strong>.
+      We help make your special occasions memorable with
+      beautiful decoration arrangements and reliable rental services.
+      Whether it is a wedding, family function or special event,
+      we are here to make your celebration beautiful.
     </p>
-  </section>
+  </div>
 
-  <section class="gallery" id="gallery">
-    <div class="section-heading">
-      <div class="eyebrow">Our portfolio</div>
-      <h2>Decoration Gallery</h2>
-      <p>Tap any photo to view it in full screen.</p>
+  <div class="features">
+    <div class="feature-card">
+      <div class="icon">💍</div>
+      <h3>Wedding Decoration</h3>
+      <p>Beautiful arrangements for your special day.</p>
     </div>
 
-    <div class="filters" aria-label="Filter gallery">
-      <button class="filter active" data-filter="all">All Designs</button>
-      <button class="filter" data-filter="stage">Stage & Wedding</button>
-      <button class="filter" data-filter="event">Events</button>
-      <button class="filter" data-filter="other">Other Designs</button>
+    <div class="feature-card">
+      <div class="icon">🎉</div>
+      <h3>Event Decoration</h3>
+      <p>Decoration for functions and celebrations.</p>
     </div>
 
-    <div class="grid" id="photoGrid"></div>
-  </section>
-
-  <!-- RENTAL CALCULATOR -->
-  <section class="rental-section" id="rental">
-    <div class="rental-container">
-      <div class="eyebrow">Rental Collection</div>
-      <h2>Choose Your Rental Items</h2>
-      <p class="rental-intro">
-        Select your items, enter quantities and choose the number
-        of rental days. Your estimated total will be calculated instantly.
-      </p>
-
-      <div class="rental-rates-note">
-        All listed prices are per piece, per day.
-        Select zero for any item you do not need.
-      </div>
-
-      <div class="rental-controls">
-        <label for="rentalDays">Rental duration (days):</label>
-        <input
-          id="rentalDays"
-          type="number"
-          min="1"
-          max="365"
-          step="1"
-          value="1"
-          inputmode="numeric"
-        >
-      </div>
-
-      <div class="rental-grid" id="rentalGrid"></div>
-
-      <div class="rental-total-card" aria-live="polite">
-        <div>
-          <div class="rental-total-label">Estimated Total Rent</div>
-          <p id="rentalSummary">0 pieces · 1 day</p>
-        </div>
-        <strong id="rentalTotal">₹0</strong>
-      </div>
-
-      <p class="rental-note">
-        This calculator provides an estimate only. Please contact us
-        to confirm actual availability and final charges.
-        Delivery or other charges, if any, are not included.
-      </p>
-
-      <a
-        class="rental-contact"
-        href="https://wa.me/918016137886?text=Assalamu%20alaikum%2C%20I%20want%20to%20enquire%20about%20rental%20items."
-        target="_blank"
-        rel="noopener"
-      >ENQUIRE ON WHATSAPP</a>
+    <div class="feature-card">
+      <div class="icon">🪑</div>
+      <h3>Rental Services</h3>
+      <p>Useful event items available on rent.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="owner" id="owner">
-    <img
-      src="Owner.jpg"
-      alt="Owner of Zulfaquar Decorators"
-      loading="lazy"
-      onerror="this.alt='Owner photo not found. Check Owner.jpg filename.'"
-    >
+<!-- GALLERY -->
 
-    <div>
-      <div class="eyebrow">The person behind our work</div>
-      <h2>Meet the Owner</h2>
+<section class="gallery" id="gallery">
+  <div class="section-heading">
+    <span>Our Work</span>
+    <h2>Decoration Gallery</h2>
+    <p>
+      Explore some of our decoration work and event arrangements.
+    </p>
+  </div>
+
+  <div class="filters">
+    <button class="filter active" data-filter="all">All Designs</button>
+    <button class="filter" data-filter="wedding">Stage & Wedding</button>
+    <button class="filter" data-filter="events">Events</button>
+    <button class="filter" data-filter="other">Other Designs</button>
+  </div>
+
+  <div class="gallery-grid" id="galleryGrid">
+
+    <!-- Gallery items Part 2 mein continue honge -->
+        <!-- OLD GALLERY PHOTOS -->
+
+    <div class="gallery-item" data-category="wedding">
+      <img src="IMG-20261018-WA0000.jpg" alt="Wedding Decoration">
+      <div class="gallery-label">Wedding Decoration</div>
+    </div>
+
+    <div class="gallery-item" data-category="wedding">
+      <img src="IMG-20261018-WA0001.jpg" alt="Stage Decoration">
+      <div class="gallery-label">Stage Decoration</div>
+    </div>
+
+    <div class="gallery-item" data-category="wedding">
+      <img src="IMG-20261018-WA0002.jpg" alt="Wedding Setup">
+      <div class="gallery-label">Wedding Setup</div>
+    </div>
+
+    <div class="gallery-item" data-category="events">
+      <img src="IMG-20261018-WA0003.jpg" alt="Event Decoration">
+      <div class="gallery-label">Event Decoration</div>
+    </div>
+
+    <div class="gallery-item" data-category="events">
+      <img src="IMG-20261018-WA0004.jpg" alt="Event Setup">
+      <div class="gallery-label">Event Setup</div>
+    </div>
+
+    <div class="gallery-item" data-category="other">
+      <img src="IMG-20261018-WA0005.jpg" alt="Decoration Design">
+      <div class="gallery-label">Beautiful Setup</div>
+    </div>
+
+    <div class="gallery-item" data-category="wedding">
+      <img src="IMG-20261018-WA0006.jpg" alt="Wedding Stage">
+      <div class="gallery-label">Wedding Stage</div>
+    </div>
+
+    <div class="gallery-item" data-category="events">
+      <img src="IMG-20261018-WA0007.jpg" alt="Event Arrangement">
+      <div class="gallery-label">Event Arrangement</div>
+    </div>
+
+    <div class="gallery-item" data-category="other">
+      <img src="IMG-20261018-WA0008.jpg" alt="Decoration">
+      <div class="gallery-label">Decoration</div>
+    </div>
+
+    <div class="gallery-item" data-category="wedding">
+      <img src="IMG-20261018-WA0009.jpg" alt="Wedding Decoration">
+      <div class="gallery-label">Wedding Decoration</div>
+    </div>
+
+    <div class="gallery-item" data-category="events">
+      <img src="IMG-20261018-WA0010.jpg" alt="Event">
+      <div class="gallery-label">Special Event</div>
+    </div>
+
+    <div class="gallery-item" data-category="other">
+      <img src="IMG-20261018-WA0011.jpg" alt="Decoration Design">
+      <div class="gallery-label">Our Decoration</div>
+    </div>
+
+    <div class="gallery-item" data-category="wedding">
+      <img src="IMG-20261018-WA0012.jpg" alt="Wedding Setup">
+      <div class="gallery-label">Wedding Setup</div>
+    </div>
+
+    <div class="gallery-item" data-category="events">
+      <img src="IMG-20261018-WA0013.jpg" alt="Event Decoration">
+      <div class="gallery-label">Event Decoration</div>
+    </div>
+
+    <div class="gallery-item" data-category="other">
+      <img src="IMG-20261018-WA0014.jpg" alt="Decoration Work">
+      <div class="gallery-label">Decoration Work</div>
+    </div>
+
+    <div class="gallery-item" data-category="wedding">
+      <img src="IMG-20261018-WA0015.jpg" alt="Wedding Stage">
+      <div class="gallery-label">Wedding Stage</div>
+    </div>
+
+    <div class="gallery-item" data-category="events">
+      <img src="IMG-20261018-WA0016.jpg" alt="Event Setup">
+      <div class="gallery-label">Event Setup</div>
+    </div>
+
+    <div class="gallery-item" data-category="other">
+      <img src="IMG-20261018-WA0017.jpg" alt="Decoration">
+      <div class="gallery-label">Beautiful Decoration</div>
+    </div>
+
+    <!-- NEW PHOTOS -->
+
+    <div class="gallery-item" data-category="wedding">
+      <img src="IMG-20261107-WA0014.jpg" alt="New Wedding Decoration">
+      <div class="gallery-label">Latest Decoration</div>
+    </div>
+
+    <div class="gallery-item" data-category="events">
+      <img src="IMG-20261107-WA0009.jpg" alt="New Event Decoration">
+      <div class="gallery-label">Event Decoration</div>
+    </div>
+
+    <div class="gallery-item" data-category="other">
+      <img src="IMG-20261107-WA0008.jpg" alt="New Decoration">
+      <div class="gallery-label">Our Latest Work</div>
+    </div>
+
+    <div class="gallery-item" data-category="wedding">
+      <img src="IMG-20261107-WA0007.jpg" alt="Wedding Design">
+      <div class="gallery-label">Wedding Design</div>
+    </div>
+
+    <div class="gallery-item" data-category="events">
+      <img src="IMG-20261107-WA0006.jpg" alt="Event Design">
+      <div class="gallery-label">Event Design</div>
+    </div>
+
+    <!-- NEW VIDEOS -->
+
+    <div class="gallery-item" data-category="events">
+      <video controls muted playsinline preload="metadata">
+        <source src="VID-20261107-WA0013.mp4" type="video/mp4">
+      </video>
+      <div class="gallery-label">Event Video</div>
+    </div>
+
+    <div class="gallery-item" data-category="wedding">
+      <video controls muted playsinline preload="metadata">
+        <source src="VID-20261107-WA0012.mp4" type="video/mp4">
+      </video>
+      <div class="gallery-label">Wedding Decoration</div>
+    </div>
+
+    <div class="gallery-item" data-category="events">
+      <video controls muted playsinline preload="metadata">
+        <source src="VID-20261107-WA0011.mp4" type="video/mp4">
+      </video>
+      <div class="gallery-label">Event Highlights</div>
+    </div>
+
+    <div class="gallery-item" data-category="other">
+      <video controls muted playsinline preload="metadata">
+        <source src="VID-20261107-WA0010.mp4" type="video/mp4">
+      </video>
+      <div class="gallery-label">Our Work</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- RENTAL SECTION -->
+
+<section class="rental" id="rental">
+
+  <div class="section-heading">
+    <span>Rental Services</span>
+    <h2>Calculate Your Rental Cost</h2>
+    <p>Select the quantity of items and rental duration to estimate your total.</p>
+  </div>
+
+  <div class="rental-box">
+
+    <p class="rental-intro">
+      Enter the number of items you need. Rates are per item, per day.
+    </p>
+
+    <div class="rental-grid">
+
+      <div class="rental-row">
+        <label>Chair</label>
+        <span class="rate">₹5 / item</span>
+        <input type="number" min="0" value="0" data-price="5" aria-label="Chair quantity">
+      </div>
+
+      <div class="rental-row">
+        <label>Table</label>
+        <span class="rate">₹20 / item</span>
+        <input type="number" min="0" value="0" data-price="20" aria-label="Table quantity">
+      </div>
+
+      <div class="rental-row">
+        <label>Suspan</label>
+        <span class="rate">₹100 / item</span>
+        <input type="number" min="0" value="0" data-price="100" aria-label="Suspan quantity">
+      </div>
+
+      <div class="rental-row">
+        <label>Carpet</label>
+        <span class="rate">₹100 / item</span>
+        <input type="number" min="0" value="0" data-price="100" aria-label="Carpet quantity">
+      </div>
+
+      <div class="rental-row">
+        <label>Net</label>
+        <span class="rate">₹50 / item</span>
+        <input type="number" min="0" value="0" data-price="50" aria-label="Net quantity">
+      </div>
+
+      <div class="rental-row">
+        <label>Boat</label>
+        <span class="rate">₹100 / item</span>
+        <input type="number" min="0" value="0" data-price="100" aria-label="Boat quantity">
+      </div>
+
+      <div class="rental-row">
+        <label>VIP</label>
+        <span class="rate">₹25 / item</span>
+        <input type="number" min="0" value="0" data-price="25" aria-label="VIP quantity">
+      </div>
+
+      <div class="rental-row">
+        <label>Bati</label>
+        <span class="rate">₹10 / item</span>
+        <input type="number" min="0" value="0" data-price="10" aria-label="Bati quantity">
+      </div>
+
+    </div>
+
+    <div class="duration-box">
+      <label for="days">Rental Duration (Days)</label>
+      <input type="number" id="days" min="1" value="1">
+    </div>
+
+    <div class="total-box">
+      <small>ESTIMATED TOTAL</small>
+      <h2 id="total">₹0</h2>
+    </div>
+
+    <p class="rental-note">
+      This is an estimated amount. Final price and availability will be confirmed by the owner.
+    </p>
+
+    <div class="rental-actions">
+      <button class="btn btn-gold" onclick="sendRentalEnquiry()">
+        Enquire on WhatsApp
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+
+<section class="about" id="about">
+
+  <div class="about-content">
+
+    <div class="owner-photo">
+      <img src="Owner.jpg" alt="Zulfaquar Decorators Owner">
+    </div>
+
+    <div class="about-text">
+      <span>ABOUT US</span>
+
+      <h2>Making Your Moments Memorable</h2>
 
       <p>
-        At Zulfaquar Decorators, we believe every occasion deserves
-        thoughtful decoration and personal attention. Our aim is to
-        help families create beautiful memories for their special days.
+        At Zulfaquar Decorators, we believe every celebration deserves
+        a beautiful setting. We provide decoration arrangements and
+        rental services for different occasions.
       </p>
 
       <p>
-        <strong>Zulfaquar Decorators</strong><br>
-        Zeropani, Islampur, West Bengal 733202
+        Our aim is to help families celebrate their special moments
+        with care, creativity and dependable service.
       </p>
 
-      <a class="button" href="#contact">GET IN TOUCH</a>
+      <p>
+        Thank you for trusting Zulfaquar Decorators.
+      </p>
+
+      <a href="https://wa.me/918016137886" class="btn btn-gold">
+        Contact the Owner
+      </a>
     </div>
-  </section>
 
-  <section class="contact" id="contact">
-    <div class="eyebrow">Let's plan something beautiful</div>
-    <h2>Your celebration starts here.</h2>
-    <p>For decoration and rental enquiries, contact us directly.</p>
-    <p>📍 Zeropani, Islampur, West Bengal 733202</p>
+  </div>
+</section>
 
-    <div class="contact-actions">
-      <a class="button" href="tel:+918016137886">CALL 8016137886</a>
+<!-- CONTACT SECTION -->
 
-      <a
-        class="button outline"
-        href="https://wa.me/918016137886?text=Assalamu%20alaikum%2C%20I%20want%20to%20enquire%20about%20decoration."
-        target="_blank"
-        rel="noopener"
-      >WHATSAPP US</a>
+<section class="contact" id="contact">
+
+  <div class="section-heading">
+    <span>Get In Touch</span>
+    <h2>Let's Plan Your Celebration</h2>
+    <p>Contact us for decoration enquiries and rental availability.</p>
+  </div>
+
+  <div class="contact-grid">
+
+    <div class="contact-card">
+      <div class="icon">📞</div>
+      <h3>Call Us</h3>
+      <p>8016137886</p>
+      <a href="tel:8016137886" class="btn btn-gold" style="margin-top:15px;">
+        Call Now
+      </a>
     </div>
-  </section>
-</main>
+
+    <div class="contact-card">
+      <div class="icon">💬</div>
+      <h3>WhatsApp</h3>
+      <p>Send us your enquiry directly.</p>
+      <a href="https://wa.me/918016137886" class="btn btn-gold" style="margin-top:15px;">
+        Message Us
+      </a>
+    </div>
+
+    <div class="contact-card">
+      <div class="icon">📍</div>
+      <h3>Our Location</h3>
+      <p>Zeropani, Islampur, West Bengal 733202</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=Zulfaquar+Decorators+Islampur+West+Bengal" target="_blank" class="btn btn-gold" style="margin-top:15px;">
+        Find Us
+      </a>
+    </div>
+
+  </div>
+</section>
+<!-- FOOTER -->
 
 <footer>
-  © <span id="year"></span> ZULFAQUAR DECORATORS<br>
-  Made with care in Islampur, West Bengal.
+  <strong>ZULFAQUAR DECORATORS</strong>
+
+  <p>Beautifully Celebrated | Islampur, West Bengal</p>
+
+  <p>
+    © <span id="year"></span> Zulfaquar Decorators.
+    All Rights Reserved.
+  </p>
+
+  <p>Designed with care.</p>
 </footer>
 
-<!-- Full-screen gallery photo viewer -->
-<div
-  id="photoViewer"
-  role="dialog"
-  aria-modal="true"
-  aria-label="Full-size decoration photo"
->
-  <span id="photoCounter"></span>
-  <button id="closeViewer" aria-label="Close photo">×</button>
-  <img id="viewerImage" src="" alt="Full-size decoration">
-</div>
+<!-- FLOATING WHATSAPP BUTTON -->
+
+<a
+  href="https://wa.me/918016137886"
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp">
+  ☎
+</a>
+
+<!-- JAVASCRIPT -->
 
 <script>
-  // EXISTING DECORATION GALLERY
-  const photos = Array.from({ length: 18 }, (_, i) => {
-    const number = String(i).padStart(4, "0");
 
-    return {
-      src: `IMG-20261018-WA${number}.jpg`,
-      category: i < 8 ? "stage" : i < 14 ? "event" : "other",
-      title: i < 8
-        ? "Stage & Wedding Decor"
-        : i < 14
-          ? "Celebration Design"
-          : "Our Decoration Work"
-    };
-  });
+/* MOBILE MENU */
 
-  const grid = document.getElementById("photoGrid");
-  const viewer = document.getElementById("photoViewer");
-  const viewerImage = document.getElementById("viewerImage");
-  const photoCounter = document.getElementById("photoCounter");
+function toggleMenu() {
+  document.getElementById("navbar").classList.toggle("show");
+}
 
-  let lastFocusedElement = null;
+function closeMenu() {
+  document.getElementById("navbar").classList.remove("show");
+}
 
-  photos.forEach((photo, i) => {
-    const card = document.createElement("figure");
-    card.className = "photo-card";
-    card.dataset.category = photo.category;
 
-    const img = document.createElement("img");
-    img.src = photo.src;
-    img.alt = `${photo.title} ${i + 1} by Zulfaquar Decorators in Islampur, West Bengal`;
-    img.loading = i < 4 ? "eager" : "lazy";
-    img.tabIndex = 0;
-    img.setAttribute("role", "button");
-    img.setAttribute("aria-label", `View design ${i + 1} full screen`);
+/* GALLERY FILTER */
 
-    img.onerror = () => {
-      img.alt = `Image not found: ${photo.src}`;
-      img.style.cursor = "default";
-    };
+const filterButtons = document.querySelectorAll(".filter");
+const galleryItems = document.querySelectorAll(".gallery-item");
 
-    const caption = document.createElement("figcaption");
-    caption.textContent = photo.title;
+filterButtons.forEach(button => {
 
-    const small = document.createElement("small");
-    small.textContent = `DESIGN ${String(i + 1).padStart(2, "0")}`;
+  button.addEventListener("click", function() {
 
-    caption.appendChild(small);
-    card.append(img, caption);
-    grid.appendChild(card);
-  });
-
-  document.querySelectorAll(".filter").forEach(button => {
-    button.addEventListener("click", () => {
-      document.querySelectorAll(".filter").forEach(b => {
-        b.classList.toggle("active", b === button);
-      });
-
-      const filter = button.dataset.filter;
-
-      document.querySelectorAll(".photo-card").forEach(card => {
-        card.hidden =
-          filter !== "all" && card.dataset.category !== filter;
-      });
+    filterButtons.forEach(btn => {
+      btn.classList.remove("active");
     });
-  });
 
-  function openPhoto(img) {
-    if (!img.naturalWidth) return;
+    this.classList.add("active");
 
-    lastFocusedElement = document.activeElement;
+    const selectedFilter = this.dataset.filter;
 
-    const index = photos.findIndex(
-      photo => photo.src === img.getAttribute("src")
-    );
+    galleryItems.forEach(item => {
 
-    viewerImage.src = img.src;
-    viewerImage.alt = img.alt;
-    photoCounter.textContent =
-      `DESIGN ${index + 1} / ${photos.length}`;
+      const category = item.dataset.category;
 
-    viewer.classList.add("open");
-    document.body.classList.add("viewer-open");
-    document.getElementById("closeViewer").focus();
-  }
-
-  grid.addEventListener("click", event => {
-    const img = event.target.closest(".photo-card img");
-    if (img) openPhoto(img);
-  });
-
-  grid.addEventListener("keydown", event => {
-    const img = event.target.closest(".photo-card img");
-
-    if (img && (event.key === "Enter" || event.key === " ")) {
-      event.preventDefault();
-      openPhoto(img);
-    }
-  });
-
-  function closePhoto() {
-    viewer.classList.remove("open");
-    document.body.classList.remove("viewer-open");
-    viewerImage.src = "";
-
-    if (lastFocusedElement) lastFocusedElement.focus();
-  }
-
-  document.getElementById("closeViewer")
-    .addEventListener("click", closePhoto);
-
-  viewer.addEventListener("click", event => {
-    if (event.target === viewer || event.target === viewerImage) {
-      closePhoto();
-    }
-  });
-
-  document.addEventListener("keydown", event => {
-    if (event.key === "Escape" && viewer.classList.contains("open")) {
-      closePhoto();
-    }
-  });
-
-  // RENTAL ITEMS AND DAILY PRICES
-  // Price = quantity × price per piece per day × rental days.
-  const rentalItems = [
-    { id: "chair", name: "Chair", price: 5 },
-    { id: "table", name: "Table", price: 20 },
-    { id: "suspan", name: "Suspan", price: 100 },
-    { id: "carpet", name: "Carpet", price: 100 },
-    { id: "net", name: "Net", price: 50 },
-    { id: "boat", name: "Boat", price: 100 },
-    { id: "vip", name: "VIP", price: 25 },
-    { id: "bati", name: "Bati", price: 10 }
-  ];
-
-  const rentalGrid = document.getElementById("rentalGrid");
-  const quantities = {};
-
-  function money(value) {
-    return "₹" + value.toLocaleString("en-IN");
-  }
-
-  rentalItems.forEach(item => {
-    quantities[item.id] = 0;
-
-    const card = document.createElement("article");
-    card.className = "rental-card";
-
-    const art = document.createElement("div");
-    art.className = "rental-art";
-    art.setAttribute("aria-hidden", "true");
-    art.textContent = "RENTAL ITEM";
-
-    const title = document.createElement("h3");
-    title.textContent = item.name;
-
-    const price = document.createElement("p");
-    price.className = "rental-price";
-    price.textContent = money(item.price) + " / piece / day";
-
-    const row = document.createElement("div");
-    row.className = "rental-qty-row";
-
-    const label = document.createElement("label");
-    label.textContent = "Quantity";
-
-    const input = document.createElement("input");
-    input.className = "rental-qty";
-    input.type = "number";
-    input.min = "0";
-    input.max = "9999";
-    input.step = "1";
-    input.value = "0";
-    input.inputMode = "numeric";
-    input.setAttribute("aria-label", item.name + " quantity");
-
-    const subtotal = document.createElement("span");
-    subtotal.className = "rental-line-total";
-    subtotal.textContent = "Subtotal: ₹0";
-
-    input.addEventListener("input", () => {
-      const parsed = Math.floor(Number(input.value));
-
-      quantities[item.id] = input.value === ""
-        ? 0
-        : Number.isFinite(parsed)
-          ? Math.max(0, Math.min(9999, parsed))
-          : 0;
-
-      if (Number(input.value) > 9999) {
-        input.value = "9999";
-        quantities[item.id] = 9999;
+      if (
+        selectedFilter === "all" ||
+        category === selectedFilter
+      ) {
+        item.classList.remove("hidden");
+      } else {
+        item.classList.add("hidden");
       }
 
-      if (Number(input.value) < 0) {
-        input.value = "0";
-        quantities[item.id] = 0;
-      }
-
-      updateRentalTotal();
     });
 
-    row.append(label, input);
-    card.append(art, title, price, row, subtotal);
-    rentalGrid.appendChild(card);
-
-    item.subtotalElement = subtotal;
   });
 
-  const daysInput = document.getElementById("rentalDays");
+});
 
-  function getRentalDays() {
-    const parsed = Math.floor(Number(daysInput.value));
-    const days = Number.isFinite(parsed)
-      ? Math.max(1, Math.min(365, parsed || 1))
-      : 1;
 
-    daysInput.value = days;
-    return days;
+/* RENTAL CALCULATOR */
+
+const rentalInputs = document.querySelectorAll(".rental-row input");
+const daysInput = document.getElementById("days");
+const totalDisplay = document.getElementById("total");
+
+function calculateTotal() {
+
+  let subtotal = 0;
+
+  const days = Math.max(1, parseInt(daysInput.value) || 1);
+
+  rentalInputs.forEach(input => {
+
+    let quantity = Math.max(0, parseInt(input.value) || 0);
+    let price = Number(input.dataset.price);
+
+    subtotal += quantity * price;
+
+  });
+
+  const total = subtotal * days;
+
+  totalDisplay.textContent = "₹" + total.toLocaleString("en-IN");
+
+  return {
+    subtotal: subtotal,
+    days: days,
+    total: total
+  };
+
+}
+
+rentalInputs.forEach(input => {
+  input.addEventListener("input", calculateTotal);
+});
+
+daysInput.addEventListener("input", calculateTotal);
+
+
+/* WHATSAPP RENTAL ENQUIRY */
+
+function sendRentalEnquiry() {
+
+  let details = [];
+  let hasItems = false;
+
+  rentalInputs.forEach(input => {
+
+    const quantity = Math.max(0, parseInt(input.value) || 0);
+
+    if (quantity > 0) {
+
+      hasItems = true;
+
+      const itemName = input.parentElement.querySelector("label").textContent;
+
+      const price = Number(input.dataset.price);
+
+      details.push(
+        itemName + " : " + quantity +
+        " × ₹" + price
+      );
+
+    }
+
+  });
+
+  if (!hasItems) {
+
+    alert("Please select at least one rental item.");
+
+    return;
+
   }
 
-  function updateRentalTotal() {
-    const days = getRentalDays();
-    let total = 0;
-    let selectedPieces = 0;
+  const calculation = calculateTotal();
 
-    rentalItems.forEach(item => {
-      const quantity = quantities[item.id];
-      const subtotal = quantity * item.price * days;
+  const message =
+`Hello Zulfaquar Decorators!
 
-      total += subtotal;
-      selectedPieces += quantity;
+I want to enquire about rental items.
 
-      item.subtotalElement.textContent =
-        "Subtotal: " + money(subtotal);
-    });
+${details.join("\n")}
 
-    document.getElementById("rentalTotal").textContent = money(total);
+Duration: ${calculation.days} day(s)
 
-    document.getElementById("rentalSummary").textContent =
-      selectedPieces + (selectedPieces === 1 ? " piece" : " pieces") +
-      " · " + days + (days === 1 ? " day" : " days");
-  }
+Estimated Total: ₹${calculation.total}
 
-  daysInput.addEventListener("input", updateRentalTotal);
-  daysInput.addEventListener("change", updateRentalTotal);
+Please confirm availability and final price.
 
-  // Display current year
-  document.getElementById("year").textContent =
-    new Date().getFullYear();
+Thank you.`;
 
-  updateRentalTotal();
+  const whatsappURL =
+    "https://wa.me/918016137886?text=" +
+    encodeURIComponent(message);
+
+  window.open(whatsappURL, "_blank");
+
+}
+
+
+/* CURRENT YEAR */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+
+/* INITIAL CALCULATION */
+
+calculateTotal();
+
 </script>
 
 </body>
