@@ -4,9 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#12251f">
-  <meta name="description" content="Wedding, event decoration and rental items by Zulfaquar Decorators in Islampur, West Bengal.">
+  <meta name="description" content="Zulfaquar Decorators offers wedding decoration, stage decoration, event decoration and rental items in Zeropani, Islampur, West Bengal 733202. Contact us for enquiries.">
+  <meta name="robots" content="index, follow">
   <meta name="google-site-verification" content="Qv1OFFncM8FMMhU_IPYymtsmMlfJ5O5hzGo9X4ijNPs">
-  <title>Zulfaquar Decorators | Beautifully Celebrated</title>
+
+  <link rel="canonical" href="https://dilshanguidely.github.io/ZULFAQUAR-DECORATORS-/">
+
+  <title>Zulfaquar Decorators Islampur | Wedding &amp; Event Decoration</title>
+
+  <meta property="og:title" content="Zulfaquar Decorators | Islampur">
+  <meta property="og:description" content="Wedding decoration, stage decoration, event setups and rental items in Islampur, West Bengal.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dilshanguidely.github.io/ZULFAQUAR-DECORATORS-/">
+  <meta property="og:site_name" content="Zulfaquar Decorators">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Zulfaquar Decorators | Islampur">
+  <meta name="twitter:description" content="Wedding and event decoration services in Islampur, West Bengal.">
 
   <style>
     :root {
@@ -192,6 +206,7 @@
     }
 
     .photo-card[hidden] { display: none !important; }
+
     .photo-card img {
       display: block;
       width: 100%;
@@ -385,6 +400,7 @@
       border-radius: 4px;
       font: bold 12px Arial, sans-serif;
     }
+
     .owner {
       background: #eae5da;
       padding: 45px 6%;
@@ -548,6 +564,29 @@
       .rental-card h3 { font-size: 15px; }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Zulfaquar Decorators",
+    "description": "Wedding decoration, stage decoration, event decoration and rental items in Islampur, West Bengal.",
+    "url": "https://dilshanguidely.github.io/ZULFAQUAR-DECORATORS-/",
+    "telephone": "+918016137886",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Zeropani",
+      "addressLocality": "Islampur",
+      "addressRegion": "West Bengal",
+      "postalCode": "733202",
+      "addressCountry": "IN"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Islampur"
+    }
+  }
+  </script>
 </head>
 
 <body>
@@ -570,12 +609,14 @@
 <main>
   <section class="hero" id="home">
     <div class="eyebrow">Every celebration deserves beauty</div>
-    <h1>Moments made<br><em>memorable.</em></h1>
+    <h1>Wedding &amp; Event<br><em>Decorators in Islampur.</em></h1>
 
     <p>
       Discover decoration ideas for weddings, celebrations
       and special occasions — crafted with care in Islampur.
-    </p><a class="button" href="#gallery">EXPLORE OUR DECORATIONS ↓</a>
+    </p>
+
+    <a class="button" href="#gallery">EXPLORE OUR DECORATIONS ↓</a>
     <a class="button outline" href="#rental">EXPLORE RENTAL ITEMS</a>
   </section>
 
@@ -583,8 +624,9 @@
     <div class="eyebrow">Welcome to our world</div>
     <h2>Decor that tells your story.</h2>
     <p>
-      From elegant stages to beautiful event setups,
-      explore our work and find inspiration for your next celebration.
+      Zulfaquar Decorators offers wedding decoration, stage decoration,
+      event decoration and rental items in Zeropani, Islampur, West Bengal.
+      Explore our work and contact us for your next celebration.
     </p>
   </section>
 
@@ -702,7 +744,9 @@
       >WHATSAPP US</a>
     </div>
   </section>
-</main><footer>
+</main>
+
+<footer>
   © <span id="year"></span> ZULFAQUAR DECORATORS<br>
   Made with care in Islampur, West Bengal.
 </footer>
@@ -749,7 +793,7 @@
 
     const img = document.createElement("img");
     img.src = photo.src;
-    img.alt = `${photo.title} ${i + 1}`;
+    img.alt = `${photo.title} ${i + 1} by Zulfaquar Decorators in Islampur, West Bengal`;
     img.loading = i < 4 ? "eager" : "lazy";
     img.tabIndex = 0;
     img.setAttribute("role", "button");
@@ -840,7 +884,9 @@
     if (event.key === "Escape" && viewer.classList.contains("open")) {
       closePhoto();
     }
-  });// RENTAL ITEMS AND DAILY PRICES
+  });
+
+  // RENTAL ITEMS AND DAILY PRICES
   // Price = quantity × price per piece per day × rental days.
   const rentalItems = [
     { id: "chair", name: "Chair", price: 5 },
