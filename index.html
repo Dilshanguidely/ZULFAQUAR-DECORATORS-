@@ -1427,7 +1427,11 @@ const grid = document.getElementById("photoGrid");
 const status = document.createElement("p");
 
 status.style.cssText = "text-align:center;font:13px Arial;color:#777;margin:15px;";
-grid.parentNode.insertBefore(status, grid);
+  if (grid) {
+  grid.parentNode.insertBefore(status, grid);
+} else {
+  throw new Error("Gallery container photoGrid not found");
+}
 status.textContent = "Loading new gallery photos...";
 
 try {
