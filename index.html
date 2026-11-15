@@ -1334,7 +1334,12 @@ const db = getFirestore(app);
 const loginArea = document.getElementById("zd-login");
 const uploadArea = document.getElementById("zd-upload-area");
 const message = document.getElementById("zd-message");
+const inventoryBox = document.createElement("div");
+inventoryBox.id = "zd-inventory";
+inventoryBox.style.cssText = "margin-top:25px;padding:15px;background:#f5ead5;color:#12251f;border-radius:10px;";
+inventoryBox.innerHTML = "<h3>Inventory Management</h3><p>Loading stock...</p>";
 
+uploadArea.appendChild(inventoryBox);
 document.getElementById("zd-login-btn").onclick = async () => {
   try {
     await signInWithEmailAndPassword(
