@@ -1280,6 +1280,7 @@ calculateTotal();
       style="width:100%;padding:12px;margin:6px 0;box-sizing:border-box;">
     <button id="zd-login-btn" style="padding:12px 20px;cursor:pointer;">
       Admin Login
+  <p id="zd-login-message"></p>
     </button>
   </div>
 
@@ -1348,8 +1349,7 @@ document.getElementById("zd-login-btn").onclick = async () => {
       document.getElementById("zd-password").value
     );
   } catch (error) {
-    message.textContent = error.message;
-  }
+    document.getElementById("zd-login-message").textContent = error.message;
 };
 async function loadInventory() {
   inventoryBox.innerHTML = "<h3>Inventory Management</h3>";
