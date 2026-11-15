@@ -1351,13 +1351,52 @@ document.getElementById("zd-login-btn").onclick = async () => {
     message.textContent = error.message;
   }
 };
+async function loadInventory() {
+  inventoryBox.innerHTML = "<h3>Inventory Management</h3>";
 
+  const snapshot = await getDocs(collection(db, "inventory"));
+
+  snapshot.forEach(item => {
+    const data = item.data();
+
+    const row = document.createElement("div");
+    row.style.cssText = "padding:10px;border-bottom:1px solid #ccc;";
+
+    row.innerHTML = `
+      <strong>${data.name}</strong><br>
+      Total Stock:
+      <input type="number" min="0" value="${data.total}">
+      <button>Save</button>
+    `;
+
+    inventoryBox.appendChild(row);
+
+    row.querySelector("button").onclick = async () => {
+      const total = Number(row.querySelector("input").value);
+
+      if (!Number.isInteger(total) || total < 0) {
+        alert("Enter a valid stock quantity.");
+        return;
+      }
+
+      await updateDoc(doc(db, "inventory", item.id), {
+        total: total
+      });
+
+      alert(data.name + " stock updated!");
+    };
+  });
+}
 onAuthStateChanged(auth, user => {
   const isAdmin = user && user.uid === ADMIN_UID;
 
   loginArea.hidden = !!isAdmin;
   uploadArea.hidden = !isAdmin;
-
+if (isAdmin) {
+  loadInventory().catch(error => {
+    inventoryBox.textContent = "Could not load inventory: " + error.message;
+  });
+}
   if (user && !isAdmin) {
     message.textContent = "This account is not an authorised admin.";
     signOut(auth);
